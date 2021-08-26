@@ -10,12 +10,19 @@
 
 <body>
     <main class="container">
-        <div class="main-content">
+        <div class="form-container">
+            <form action="/new" method="POST" class="new-form">
+                <input type="text" placeholder="Nama Dosen" required="required">
+                <input type="text" placeholder="Inisial" required="required">
+                <input type="text" placeholder="Lab (Opsional)">
+                <input type="text" placeholder="Status (Opsional)">
 
-            <div class="box-form">
-                <form action="/" method="POST"></form>
-            </div>
-
+                <button type="submit" class="submit-btn">Create</button>
+            </form>
+            
+            <a href="/" class="cancel-btn">
+                Cancel
+            </a>
         </div>
     </main>    
 </body>

@@ -31,11 +31,7 @@ app.use(
   })
 );
 
-//halaman utama
-app.get('/', (req, res) => {
-  res.render('index');
-});
-
+//live search
 app.post('/liveSearch', async (req, res) => {
   let payload = req.body.payload.trim();
   let search = await Product.find({
@@ -44,7 +40,21 @@ app.post('/liveSearch', async (req, res) => {
 
   search = search.slice(0, 10);
 
-  res.send({payload: search});
+  res.send({ payload: search });
+});
+
+
+//menambah data dosen
+//method get untuk mengambil front end dari menambah dosen
+app.get('/new', (req, res) => {
+  res.render('newDosen');
+})
+
+
+
+//halaman utama
+app.get('/', (req, res) => {
+  res.render('index');
 });
 
 module.exports = app;
