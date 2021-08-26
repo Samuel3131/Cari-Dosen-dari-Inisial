@@ -11,11 +11,11 @@
 <body>
     <main class="container">
         <div class="form-container">
-            <form action="/new" method="POST" class="new-form">
-                <input type="text" placeholder="Nama Dosen" required="required">
-                <input type="text" placeholder="Inisial" required="required">
-                <input type="text" placeholder="Lab (Opsional)">
-                <input type="text" placeholder="Status (Opsional)">
+            <form action="/" method="POST" class="new-form">
+                <input type="text" placeholder="Nama Dosen" required="required" name="nama" id="nama">
+                <input type="text" placeholder="Inisial" required="required" name="inisial" id="inisial">
+                <input type="text" placeholder="Lab (Opsional)" name="lab" id="lab">
+                <input type="text" placeholder="Status (Opsional)" name="statusDosen" id="statusDosen">
 
                 <button type="submit" class="submit-btn">Create</button>
             </form>

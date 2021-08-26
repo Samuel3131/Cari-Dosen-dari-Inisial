@@ -1,6 +1,5 @@
 const express = require('express');
 const app = express();
-const bodyParser = require('body-parser');
 const Product = require('../Models/product');
 require('dotenv').config();
 
@@ -23,6 +22,7 @@ db.once('open', () => {
 
 app.set('view engine', 'ejs');
 app.use(express.static('public'));
+app.use(express.urlencoded({extended: true}))
 
 app.use(express.json());
 app.use(
@@ -50,6 +50,13 @@ app.get('/new', (req, res) => {
   res.render('newDosen');
 })
 
+//post untuk menambah
+app.post('/', async (req, res) => {
+  // console.log(req.body);
+  const newDosen = new Product(req.body);
+  await newDosen.save();
+  res.redirect('/');
+})
 
 
 //halaman utama
