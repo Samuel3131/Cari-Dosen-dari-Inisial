@@ -1,3 +1,2 @@
 # Cari-Dosen-dari-Inisial
-Cari dosen dari inisial
-Soon : validation
+Cari dosen dari inisial. (Soon : validation)
